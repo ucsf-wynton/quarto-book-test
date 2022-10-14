@@ -65,7 +65,15 @@ $ git push
 
 ### Publish to GitHub Pages (manually)
 
-This repository was set up as a _private_ GitHub repository.  Since it is hosted under the <https://github.com/ucsf-wynton/> organization, which is under the GitHub Enterprise Cloud plan that UCSF has, we can use _private_ GitHub Pages.  The instructions for publish to GitHub Pages are the same for private and public GitHub Pages (<https://quarto.org/docs/publishing/github-pages.html>);
+This repository was set up as a _private_ GitHub repository.  Since it is hosted under the <https://github.com/ucsf-wynton/> organization, which is under the GitHub Enterprise Cloud plan that UCSF has, we can use _private_ GitHub Pages.  The instructions for publish to GitHub Pages are the same for private and public GitHub Pages (<https://quarto.org/docs/publishing/github-pages.html>).  We first have to do:
+
+```sh
+$ touch .nojekyll
+$ git add .nojekyll
+$ git commit .nojekyll -m "Disable default Jekyll for GitHub Pages"
+```
+
+Then, each time we want to publish an update, we call:
 
 ```sh
 $ quarto publish gh-pages
