@@ -63,7 +63,7 @@ $ git push
 ```
 
 
-### Publish to GitHub Pages
+### Publish to GitHub Pages (manually)
 
 This repository was set up as a _private_ GitHub repository.  Since it is hosted under the <https://github.com/ucsf-wynton/> organization, which is under the GitHub Enterprise Cloud plan that UCSF has, we can use _private_ GitHub Pages.  The instructions for publish to GitHub Pages are the same for private and public GitHub Pages (<https://quarto.org/docs/publishing/github-pages.html>);
 
@@ -79,5 +79,19 @@ The only culprit is that this command will get stuck at:
 
 We have to hit <kbd>Ctrl-C</kbd> to break out of it.  This is a bug, which I've reported (<https://github.com/quarto-dev/quarto-cli/issues/2864>).
 
+
+
+### Publish to GitHub Pages (automatically via GitHub Actions)
+
+After making sure I could publish to GitHub Pages manually (previous section), I turned to do it automatically via GitHub Actions.  Following the instructions at <https://quarto.org/docs/publishing/github-pages.html#github-action>, I added the following top-level entry to the [`_quarto.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/_quarto.yml) file;
+
+```yml
+execute:
+  freeze: auto
+```
+
+_Comment_: This is only needed if we would have dynamic code snippets in our book.  Currently, we don't have, but I added it now just in case.
+
+Then I added GitHub Actions workflow [`.github/workflows/publish.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml), which was cut'n'pasted from <https://quarto.org/docs/publishing/github-pages.html#github-action>.
 
 [Quarto]: https://quarto.org/
