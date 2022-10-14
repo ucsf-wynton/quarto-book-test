@@ -10,6 +10,7 @@ book:
     - intro.qmd
     - summary.qmd
     - references.qmd
+  downloads: [pdf]
 
 bibliography: references.bib
 
