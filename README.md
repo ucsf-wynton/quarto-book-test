@@ -4,7 +4,7 @@ This repository was created to explore using [Quarto] for creating and publishin
 
 ## The published book
 
-The published version of this Quarto Book is available at <https://upgraded-spork-6075ab73.pages.github.io/>.  In addition to being available as an online HTML book, it's also downloadable as a PDF (via the icon under the book title).  The book content is automatically indexed by Quarto, so it can be searched online (depsite being a static website).
+The published version of this Quarto Book is available at <https://ucsf-wynton.github.io/quarto-book-test/>.  In addition to being available as an online HTML book, it's also downloadable as a PDF (via the icon under the book title).  The book content is automatically indexed by Quarto, so it can be searched online (depsite being a static website).
 
 This is a private site that can only be access by those who have access to this <https://github.com/ucsf-wynton/quarto-book-test/> repository.
 
