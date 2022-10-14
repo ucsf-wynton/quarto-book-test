@@ -4,7 +4,7 @@ This repository was created to explore using [Quarto] for creating and publishin
 
 ## The published book
 
-The published version of this Quarto Book is available at <https://upgraded-spork-6075ab73.pages.github.io/>.  
+The published version of this Quarto Book is available at <https://upgraded-spork-6075ab73.pages.github.io/>.  In addition to being available as an online HTML book, it's also downloadable as a PDF (via the icon under the book title).  The book content is automatically indexed by Quarto, so it can be searched online (depsite being a static website).
 
 This is a private site that can only be access by those who have access to this <https://github.com/ucsf-wynton/quarto-book-test/> repository.
 
@@ -92,6 +92,16 @@ execute:
 
 _Comment_: This is only needed if we would have dynamic code snippets in our book.  Currently, we don't have, but I added it now just in case.
 
-Then I added GitHub Actions workflow [`.github/workflows/publish.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml), which was cut'n'pasted from <https://quarto.org/docs/publishing/github-pages.html#github-action>.
+Then I added GitHub Actions workflow [`.github/workflows/publish.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml), which was cut'n'pasted from <https://quarto.org/docs/publishing/github-pages.html#github-action>.  In order to build the PDF, which is built via LaTeX, I had to instruct GitHub Actions that TinyTeX is needed;
+
+```sh
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+```
+
+which is something I found out from <https://github.com/quarto-dev/quarto-actions/blob/c1016e37977d5684cfdfce516c9480b6b4741568/setup/README.md> after initially getting errors on GitHub Actions.
+
 
 [Quarto]: https://quarto.org/
