@@ -44,7 +44,7 @@ This is how the book will look like when published online.
 
 ### Create git repository (once)
 
-Next step was to set this up in git repository to be pushed to GitHub.  Reading ahead in the instruction, I first created a [`.gitignore`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/.gitignore) file that ignores certain files and folders we don't want include in the git repository;
+Next step was to set this up in git repository to be pushed to GitHub.  Reading ahead in the instruction, I first created a [.gitignore] file that ignores certain files and folders we don't want include in the git repository;
 
 ```plain
 *~
@@ -91,7 +91,7 @@ We have to hit <kbd>Ctrl-C</kbd> to break out of it.  This is a bug, which I've 
 
 ### Publish to GitHub Pages (automatically via GitHub Actions)
 
-After making sure I could publish to GitHub Pages manually (previous section), I turned to do it automatically via GitHub Actions.  Following the instructions at <https://quarto.org/docs/publishing/github-pages.html#github-action>, I added the following top-level entry to the [`_quarto.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/_quarto.yml) file;
+After making sure I could publish to GitHub Pages manually (previous section), I turned to do it automatically via GitHub Actions.  Following the instructions at <https://quarto.org/docs/publishing/github-pages.html#github-action>, I added the following top-level entry to the [_quarto.yml] file;
 
 ```yml
 execute:
@@ -100,7 +100,7 @@ execute:
 
 _Comment_: This is only needed if we would have dynamic code snippets in our book.  Currently, we don't have, but I added it now just in case.
 
-Then I added GitHub Actions workflow [`.github/workflows/publish.yml`](https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml), which was cut'n'pasted from <https://quarto.org/docs/publishing/github-pages.html#github-action>.  In order to build the PDF, which is built via LaTeX, I had to instruct GitHub Actions that TinyTeX is needed;
+Then I added GitHub Actions workflow [.github/workflows/publish.yml], which was cut'n'pasted from <https://quarto.org/docs/publishing/github-pages.html#github-action>.  In order to build the PDF, which is built via LaTeX, I had to instruct GitHub Actions that TinyTeX is needed;
 
 ```sh
       - name: Set up Quarto
@@ -113,3 +113,6 @@ which is something I found out from <https://github.com/quarto-dev/quarto-action
 
 
 [Quarto]: https://quarto.org/
+[.gitignore]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/.gitignore
+[_quarto.yml]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/_quarto.yml
+[.github/workflows/publish.yml]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml
