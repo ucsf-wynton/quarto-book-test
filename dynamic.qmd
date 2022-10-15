@@ -1,0 +1,20 @@
+# Dynamic Code Blocks
+
+## Dynamic R
+
+```{r}
+message("Hello world!")
+```
+
+## Dynamic Python
+
+```{python}
+print("Hello world!")
+```
+
+
+## Dynamic bash
+
+```{bash}
+echo "Hello world!"
+```

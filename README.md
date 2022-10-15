@@ -124,8 +124,16 @@ book:
   date: last-modified
 ```
 
+### Dynamic Code Blocks
+
+Quarto supports dynamically-generated code blocks.  I've added the [dynamic.qmd] file illustrating how to use evaluate R, Python, and Bash code dynamically so that the output is captured and included in the book.  This page was added the page to [_quarto.yml].
+
+_Warning_: Don't forget to add the [_freeze/] folder to the git repository, if you render the book via GitHub Actions.
+
 
 [Quarto]: https://quarto.org/
 [.gitignore]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/.gitignore
 [_quarto.yml]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/_quarto.yml
+[_freeze/]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/_freeze/
 [.github/workflows/publish.yml]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/.github/workflows/publish.yml
+[dynamic.qmd]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/dynamic.qmd
