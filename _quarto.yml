@@ -22,4 +22,5 @@ format:
     documentclass: scrreprt
 
 execute:
-  freeze: auto
+  freeze: true
+  
