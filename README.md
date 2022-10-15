@@ -112,6 +112,19 @@ Then I added GitHub Actions workflow [.github/workflows/publish.yml], which was 
 which is something I found out from <https://github.com/quarto-dev/quarto-actions/blob/c1016e37977d5684cfdfce516c9480b6b4741568/setup/README.md> after initially getting errors on GitHub Actions.
 
 
+## Quarto Features
+
+### Dynamic Dates
+
+To make Quarto update the published date automatically, modify [_quarto.yml] to use:
+
+```yml
+book:
+  ...
+  date: last-modified
+```
+
+
 [Quarto]: https://quarto.org/
 [.gitignore]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/.gitignore
 [_quarto.yml]: https://github.com/ucsf-wynton/quarto-book-test/blob/main/_quarto.yml
