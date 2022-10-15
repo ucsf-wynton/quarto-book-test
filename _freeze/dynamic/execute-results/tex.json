@@ -1,0 +1,20 @@
+{
+  "hash": "2220f252d0c31f85dc11e6acc0b85268",
+  "result": {
+    "markdown": "# Dynamic Code Blocks\n\n## Dynamic R\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmessage(\"Hello world!\")\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nHello world!\n```\n:::\n:::\n\n\n\n## Dynamic Python\n\n\n\n::: {.cell}\n\n```{.python .cell-code}\nprint(\"Hello world!\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nHello world!\n```\n:::\n:::\n\n\n\n\n## Dynamic bash\n\n\n\n::: {.cell}\n\n```{.bash .cell-code}\necho \"Hello world!\"\n```\n\n\n::: {.cell-output .cell-output-stdout}\n```\nHello world!\n```\n:::\n:::\n",
+    "supporting": [
+      "dynamic_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
